@@ -7,14 +7,32 @@ public class Mult {
         int numOne = sc.nextInt();
         System.out.print("2:");
         int numTwo = sc.nextInt();
-        int res = um(numOne, numTwo);
+        int res = Multiplication(numOne, numTwo);
         System.out.println(res + " - result");
     }
-    private static int um(int numOne, int numTwo) {
+
+    private static int Multiplication(int numOne, int numTwo) {
         int result = 0;
-        if (numOne < 0 && numTwo < 0){numOne=-numOne; numTwo=-numTwo;}
-        if (numOne>numTwo) { int s;s = numTwo;numTwo = numOne;numOne = s; }
-        if (numTwo<0){ numTwo=-numTwo; }
-        if (numOne == 0 || numTwo == 0){ return result; } else{ for (int i=0;i<numTwo; i++){ result += numOne; }return result; }
+
+        if (numOne < 0 && numTwo < 0){
+            numOne=-numOne;
+            numTwo=-numTwo;
+        }
+
+        if (numOne>numTwo) {
+            int s;
+            s = numTwo;
+            numTwo = numOne;
+            numOne = s;
+        }
+
+        if (numOne == 0 || numTwo == 0){
+            return result;
+        } else {
+            for (int i=0;i<numTwo; i++) {
+                result += numOne;
+            }
+            return result;
+        }
     }
 }
