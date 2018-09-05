@@ -28,11 +28,12 @@ public class Mult {
 
         if (numOne == 0 || numTwo == 0){
             return result;
-        } else {
-            for (int i=0;i<numTwo; i++) {
-                result += numOne;
-            }
-            return result;
         }
+
+        for (int i=0;i<numTwo; i++) {
+            result += numOne;
+        }
+        return result;
+
     }
 }
