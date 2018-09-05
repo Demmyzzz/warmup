@@ -14,7 +14,7 @@ public class Mult {
     private static int Multiplication(int numOne, int numTwo) {
         int result = 0;
 
-        if (numOne < 0 || numTwo < 0){
+        if (numOne < 0 && numTwo < 0){
             numOne=-numOne;
             numTwo=-numTwo;
         }
